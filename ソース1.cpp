@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+using namespace std;
 
 // 文字列s1の中から文字列s2を探し、最初に見つかった位置へのポインタを返す関数
 const char* str_match(const char* s1, const char* s2) {
@@ -36,11 +37,10 @@ int main() {
     const char* result = str_match(s1, s2);
 
     if (result != nullptr) {
-        std::cout << "見つかりました: " << result << std::endl;
-        std::cout << "インデックス: " << (result - s1) << " (&s1[" << (result - s1) << "])" << std::endl;
+        cout << "見つかりました" << (result - s1) << " (&s1[" << (result - s1) << "])" << std::endl;
     }
     else {
-        std::cout << "見つかりませんでした (nullptr)" << std::endl;
+        cout << "見つかりませんでした (nullptr)" << std::endl;
     }
 
     return 0;
